@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="50dp">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+            <ImageView android:src="@mipmap/ic_launcher_round"
+                       android:layout_gravity="center"
+                       android:layout_width="100dp"
+                       android:layout_height="100dp"/>
+
+            <TextView android:id="@+id/version"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:textAlignment="center"
+                      android:textSize="20sp"
+                      android:textColor="#000"
+                      android:layout_marginTop="10dp"
+                      tools:text="Версия 1.07"/>
+        </LinearLayout>
+
+        <View android:layout_marginTop="30dp"
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="#80BDCFD5"/>
+
+        <Button android:background="@drawable/button_site"
+                android:id="@+id/dev_site_button"
+                android:textColor="#000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:paddingStart="30dp"
+                android:textAlignment="textStart"
+                android:text="@string/dev_site"/>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="#80BDCFD5"/>
+
+        <Button android:background="@drawable/button_site"
+                android:id="@+id/support_button"
+                android:textColor="#000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:paddingStart="30dp"
+                android:textAlignment="textStart"
+                android:text="@string/support_site"/>
+
+        <View android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="#80BDCFD5"/>
+
+        <FrameLayout android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+            <ProgressBar
+                    android:id="@+id/progress_indicator"
+                    android:layout_gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:indeterminate="true"/>
+
+            <TextView
+                    android:id="@+id/main_content"
+                    android:padding="10dp"
+                    android:textSize="9pt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    tools:text="Sample"/>
+        </FrameLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,71 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppThemeMain" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <item name="editTextStyle">@style/EBashEditText</item>
+        <item name="buttonStyle">@style/EBashButton</item>
+        <item name="checkboxStyle">@style/ECheckBox</item>
+
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="fontFamily">@font/montserrat</item>
+
+        <item name="android:datePickerDialogTheme">@style/DatePickerDialogTheme</item>
+    </style>
+
+    <style name="AppThemeMain.NoActionBar" parent="AppThemeMain">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="EBashEditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/edit_text_background</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:textColor">@color/editTextColor</item>
+        <item name="android:textColorHint">@color/editTextHintColor</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="EBashButton" parent="Base.Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_background</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/buttonTextColor</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <style name="ECheckBox" parent="Base.Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:paddingStart">@dimen/padding_checkbox</item>
+        <item name="android:button">@drawable/checkbox_button</item>
+    </style>
+
+    <style name="NavigationDrawerStyle">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="DatePickerDialogTheme" parent="android:Theme.Material.Dialog">
+        <item name="android:datePickerStyle">@style/DatePickerStyle</item>
+    </style>
+
+    <style name="DatePickerStyle" parent="@android:style/Widget.Material.Light.DatePicker">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">#f00</item>
+    </style>
+
+</resources>

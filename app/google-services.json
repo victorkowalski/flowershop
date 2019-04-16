@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "668845782650",
+    "firebase_url": "https://ebash-application.firebaseio.com",
+    "project_id": "ebash-application",
+    "storage_bucket": "ebash-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:668845782650:android:1899abb63bdf379e",
+        "android_client_info": {
+          "package_name": "today.e_bash.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "668845782650-iihpl05691g58eusajkqsj5p26sprveo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3e3F6KB4rLnlOyWNezRlf2cyMLDSaG9w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

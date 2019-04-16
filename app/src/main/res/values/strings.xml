@@ -1,0 +1,89 @@
+<resources>
+    <string name="app_name">E-Bash</string>
+
+    <string name="catalog">Каталог</string>
+    <string name="basket">Корзина</string>
+    <string name="promotions">Акции</string>
+    <string name="bonuses">Мои бонусы</string>
+    <string name="personal_area">Личный кабинет</string>
+    <string name="about_company">О компании</string>
+    <string name="about_program">О программе</string>
+    <string name="shops_on_map">Магазины на карте</string>
+    <string name="order">Оформление</string>
+    <string name="product">Продукт</string>
+    <string name="filter">Фильтр</string>
+
+    <string name="short_catalog">Каталог</string>
+    <string name="short_bonuses">Бонусы</string>
+
+    <string name="open_menu">Открыть</string>
+    <string name="close_menu">Закрыть</string>
+    <string name="auth_screen_message">Мы пришлем Вам код подтверждения</string>
+    <string name="auth_phone_label">Ваш номер телефона</string>
+    <string name="continue_label">Продолжить</string>
+    <string name="auth_enter_pin_title">Введите полученный код</string>
+    <string name="auth_pin_label">Код из смс-сообщения</string>
+    <string name="confirm_label">Подтвердить</string>
+
+    <string name="test_phone_number">0 000 000 00 00</string>
+    <string name="invalid_phone_number">Неверный номер телефона</string>
+    <string name="error" formatted="false">Ошибка %s</string>
+    <string name="attach_phone_to_reader">Приложите телефон к \nсчитывателю</string>
+    <string name="or">или</string>
+    <string name="show_code">Покажите код кассиру</string>
+    <string name="my_bonuses">Мои Бонусы</string>
+    <string name="in_your_account">На вашем счёте:</string>
+    <string name="points">баллов</string>
+    <string name="points_format" formatted="false">%s баллов</string>
+    <string name="get_more_bonuses">Получить еще</string>
+    <string name="spend_bonuses">Потратить</string>
+    <string name="write_postcard_text">Написать текст открытки</string>
+    <string name="its_free">Это бесплатно</string>
+    <string name="product_image">product image</string>
+
+    <string name="price" formatted="false">%s ₽</string>
+    <string name="write_off_bonuses" formatted="false"> - %s ₽</string>
+    <string name="show_more">Посмотреть еще</string>
+
+    <string name="first_name">Имя</string>
+    <string name="last_name">Фамилия</string>
+    <string name="sure_name">Отчество</string>
+    <string name="phone">Номер телефона</string>
+    <string name="agreement">Обработка персональных данных</string>
+    <string name="birthdate">Дата рождения</string>
+    <string name="save">Сохранить</string>
+    <string name="exit">Выйти из учетной записи</string>
+    <string name="man">Мужчина</string>
+    <string name="woman">Женщина</string>
+    <string name="dev_site">Сайт разработчика</string>
+    <string name="support_site">Служба поддержки</string>
+
+    <string name="select_size">Выберите размер:</string>
+    <string name="e_map">Карта</string>
+    <string name="e_list">Список</string>
+
+    <string name="google_maps_API_key">AIzaSyAWQvNAoStDjFQZ8ACQZZb3vU4BHVdWYAo</string>
+    <string name="order_price">Сумма заказа:</string>
+    <string name="checkout">Оформить заказ</string>
+    <string name="additional_products">Дополнительные товары</string>
+
+    <string name="build_a_route">Построить маршрут сюда</string>
+    <string name="register_in_sys">Регистрация в системе</string>
+    <string name="send_again">Отправить ещё</string>
+    <string name="didnt_receive_sms">Не получили смс?</string>
+    <string name="resend_via" formatted="false">Выслать через %02.0f:%02.0f</string>
+    <string name="filter_show">ПОКАЗАТЬ</string>
+    <string name="save_dialog_personal">Изменения успешно сохранены</string>
+    <string name="auth_check_phone_message">Проверьте правильность</string>
+    <string name="all_right_message">Всё верно</string>
+
+    <string name="all_fields_required">Заполните обязательные поля!</string>
+    <string name="phone_required">заполните телефон</string>
+    <string name="name_required">заполните имя</string>
+    <string name="date_required">заполните дату</string>
+    <string name="time_required">заполните время</string>
+    <string name="bonus_amount_exceeded">Возможно списать не более 30% от суммы заказа</string>
+    <string name="yakassa_product_name">City Rose</string>
+    <string name="yakassa_product_description">оплата заказа</string>
+
+</resources>

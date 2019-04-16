@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/root_view"
+        android:layout_gravity="center"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+>
+    <ImageView
+            android:layout_height="165dp" tools:srcCompat="@tools:sample/avatars" android:id="@+id/previewImage"
+            app:layout_constraintBottom_toTopOf="@+id/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="10dp" android:layout_width="165dp"/>
+    <TextView
+            android:text="Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:id="@+id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:maxLines="1"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2" android:ellipsize="end" android:textSize="13sp"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/linearLayout2" android:layout_marginBottom="2dp">
+        <TextView
+                android:text="Discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/discount" android:layout_weight="0"
+                android:layout_marginRight="10dp" android:textSize="12sp"/>
+        <TextView
+                android:text="Price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/price" android:layout_weight="0"
+                android:textSize="12sp"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

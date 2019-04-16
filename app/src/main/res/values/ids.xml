@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="options_recycler_view" type="id"/>
+    <item name="price" type="id"/>
+    <item name="discount" type="id"/>
+    <item name="extra" type="id"/>
+</resources>

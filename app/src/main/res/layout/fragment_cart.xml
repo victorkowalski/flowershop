@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_height="match_parent"
+             android:layout_width="match_parent">
+
+    <ProgressBar android:id="@+id/progress_indicator"
+                 android:indeterminate="true"
+                 android:layout_gravity="center"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"/>
+
+    <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/products_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginRight="38dp"/>
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:gravity="center_horizontal"
+                          android:orientation="horizontal"
+                          android:layout_marginTop="20dp">
+
+                <TextView android:text="@string/order_price"
+                          android:textSize="16sp"
+                          android:textColor="@android:color/black"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"/>
+
+                <TextView tools:text="1666 ₽"
+                          android:id="@+id/order_price"
+                          android:textSize="16sp"
+                          android:textColor="@android:color/black"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="5dp"/>
+
+            </LinearLayout>
+
+            <Button android:layout_marginLeft="38dp"
+                    android:layout_marginRight="38dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/checkout"
+                    android:text="@string/checkout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:layout_marginTop="30dp"
+                  android:layout_marginBottom="30dp"
+                  android:background="#EAEAEA"/>
+
+            <TextView android:text="@string/additional_products"
+                      android:id="@+id/additional_products"
+                      android:textAlignment="center"
+                      android:textSize="16sp"
+                      android:textColor="@android:color/black"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"/>
+
+            <RadioGroup
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:id="@+id/rb_additional_group"
+                    android:layout_gravity="center_horizontal"
+                    android:checkedButton="@+id/rb_all"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/cart_rg_background"
+                    android:padding="1dp">
+
+                <RadioButton
+                        android:button="@null"
+                        android:background="@drawable/cart_rb_switch_background"
+                        android:textColor="@drawable/cart_rb_text_color"
+                        android:text="@null"
+                        android:paddingTop="9dp"
+                        android:paddingBottom="7dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:id="@+id/rb_all"
+                        android:layout_weight="1"/>
+
+                <RadioButton
+                        android:button="@null"
+                        android:background="@drawable/cart_rb_switch_background"
+                        android:textColor="@drawable/cart_rb_text_color"
+                        android:text="@null"
+                        android:paddingTop="9dp"
+                        android:paddingBottom="7dp"
+                        android:layout_width="match_parent"
+                        android:textAlignment="center"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb_filtered"
+                        android:layout_weight="1"/>
+            </RadioGroup>
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/additional_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginRight="38dp"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</FrameLayout>

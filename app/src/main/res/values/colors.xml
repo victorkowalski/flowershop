@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F8939A</color>
+    <color name="colorPrimaryDark">#AD666B</color>
+    <color name="colorAccent">#F8939A</color>
+
+    <color name="selectedItemColor">#FAB3B8</color>
+
+    <color name="toolbarTitleColor">#fff</color>
+
+    <color name="editTextColor">#000</color>
+    <color name="editTextHintColor">#B3B3B3</color>
+    <color name="editTextBorder">#B3B3B3</color>
+
+    <color name="disabledButtonColor">#b3b3b3</color>
+    <color name="buttonTextColor">#fff</color>
+
+    <color name="separatorColor">#80BDCFD5</color>
+
+    <color name="mainTextColor">#000</color>
+
+</resources>
+<!--resources>
+    <color name="colorPrimary1">#01B1EC</color>
+    <color name="colorPrimaryDark1">#00556D</color>
+    <color name="colorAccent1">#01B1EC</color>
+
+    <color name="selectedItemColor1">#4D01B1EC</color>
+
+    <color name="toolbarTitleColor1">#fff</color>
+
+    <color name="editTextColor1">#000</color>
+    <color name="editTextHintColor1">#B3B3B3</color>
+    <color name="editTextBorder1">#B3B3B3</color>
+
+    <color name="disabledButtonColor1">#b3b3b3</color>
+    <color name="buttonTextColor1">#fff</color>
+
+    <color name="separatorColor1">#80BDCFD5</color>
+
+    <color name="mainTextColor1">#000</color>
+
+</resources-->
+

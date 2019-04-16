@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              xmlns:mask="http://schemas.android.com/apk/res-auto"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="?attr/actionBarSize"
+                  android:background="@color/colorAccent">
+        <TextView android:id="@+id/register_in_sys"
+                  android:text="@string/register_in_sys"
+                  android:textColor="@android:color/white"
+                  android:textSize="16sp"
+                  android:layout_gravity="center"
+                  android:textAlignment="center"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginRight="38dp">
+
+                <TextView android:text="@string/auth_screen_message"
+                          android:id="@+id/auth_screen_message"
+                          android:textSize="16sp"
+                          android:textColor="#000"
+                          android:textAlignment="center"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="40dp"/>
+
+                <TextView android:text="@string/auth_phone_label"
+                          android:id="@+id/auth_phone_label"
+                          android:layout_marginTop="15dp"
+                          android:textColor="#878787"
+                          android:textSize="11sp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          tools:ignore="SmallSp"/>
+
+                <br.com.sapereaude.maskedEditText.MaskedEditText
+                        style="@style/EBashEditText"
+                        android:id="@+id/phoneTextEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:inputType="phone"
+                        mask:allowed_chars="1234567890"
+                        mask:mask="+7 (###) ###-##-##"
+                        app:keep_hint="true"
+                        android:lines="1"/>
+
+                <TextView android:id="@+id/phone_error_label"
+                          android:layout_marginTop="7dp"
+                          android:visibility="gone"
+                          tools:visibility="visible"
+                          tools:text="Ошибка"
+                          android:textColor="@android:color/holo_red_dark"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"/>
+
+                <Button android:id="@+id/continue_button"
+                        android:text="@string/continue_label"
+                        android:layout_gravity="center_horizontal"
+                        android:enabled="false"
+                        android:layout_marginTop="30dp"
+                        android:paddingStart="48dp"
+                        android:paddingEnd="48dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/send_code_form"
+                          android:visibility="gone"
+                          android:orientation="vertical"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          tools:visibility="visible">
+
+                <View android:layout_marginTop="30dp"
+                      android:background="@color/separatorColor"
+                      android:layout_width="match_parent"
+                      android:layout_height="1dp"/>
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="38dp"
+                        android:layout_marginRight="38dp">
+
+                    <TextView android:text="@string/auth_enter_pin_title"
+                              android:id="@+id/auth_enter_pin_title"
+                              android:textSize="16sp"
+                              android:textColor="#000"
+                              android:textAlignment="center"
+                              android:layout_marginTop="30dp"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"/>
+
+                    <TextView android:text="@string/auth_pin_label"
+                              android:textSize="11sp"
+                              android:layout_marginTop="15dp"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content" tools:ignore="SmallSp"/>
+
+                    <EditText android:id="@+id/pinTextEdit"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:inputType="number"
+                              android:layout_marginTop="7dp"
+                              android:lines="1"/>
+
+                    <TextView android:id="@+id/pin_error_label"
+                              android:visibility="gone"
+                              tools:visibility="visible"
+                              tools:text="Ошибка"
+                              android:textColor="@android:color/holo_red_dark"
+                              android:layout_marginTop="7dp"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"/>
+
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginTop="15dp"
+                                  android:orientation="horizontal">
+
+                        <LinearLayout android:orientation="vertical"
+                                      android:layout_weight="1"
+                                      android:layout_width="0dp"
+                                      android:gravity="center_vertical"
+                                      android:layout_height="match_parent">
+                            <TextView android:text="@string/didnt_receive_sms"
+                                      android:id="@+id/didnt_receive_sms"
+                                      android:textColor="@color/mainTextColor"
+                                      android:textSize="11sp"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      tools:ignore="SmallSp"/>
+                            <TextView android:text="@string/resend_via"
+                                      android:id="@+id/resend_via"
+                                      android:textSize="11sp"
+                                      android:textColor="@color/mainTextColor"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      tools:ignore="SmallSp"/>
+                        </LinearLayout>
+
+                        <Button android:text="@string/send_again"
+                                android:id="@+id/send_again_button"
+                                android:background="@drawable/button_background_invert"
+                                android:textColor="@color/button_text_color_invert"
+                                android:paddingStart="15dp"
+                                android:paddingEnd="15dp"
+                                android:enabled="false"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                    </LinearLayout>
+
+                    <Button android:id="@+id/send_pin_button"
+                            android:text="@string/confirm_label"
+                            android:layout_gravity="center_horizontal"
+                            android:enabled="false"
+                            android:layout_marginTop="25dp"
+                            android:paddingStart="48dp"
+                            android:paddingEnd="48dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

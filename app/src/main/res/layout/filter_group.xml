@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout android:id="@+id/expand_button"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:paddingTop="10dp"
+                  android:paddingBottom="10dp"
+                  android:orientation="horizontal">
+
+        <TextView android:id="@+id/name"
+                  tools:text="Test"
+                  android:layout_marginTop="26dp"
+                  android:layout_marginBottom="26dp"
+                  android:textSize="16sp"
+                  android:textColor="@android:color/black"
+                  android:layout_width="0dp"
+                  android:layout_weight="1"
+                  android:layout_height="wrap_content"/>
+
+        <ImageView android:id="@+id/ic_group_expand_icon"
+                   android:src="@drawable/ic_group_expand_icon"
+                   android:layout_gravity="center"
+                   android:layout_width="30dp"
+                   android:layout_height="30dp" android:scaleType="centerInside"/>
+
+    </LinearLayout>
+
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expandable_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="32dp"
+            app:el_duration="300"
+            app:el_expanded="false">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/params_block"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </net.cachapa.expandablelayout.ExpandableLayout>
+
+</LinearLayout>

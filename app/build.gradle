@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
+
+apply from: rootProject.file('sensitive.gradle')
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "today.e_bash.app"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0.0"
+
+        buildConfigField "String", "MERCHANT_TOKEN", "${optionalProperty('merchantToken')}"
+        buildConfigField "String", "GATEWAY_ID", "${optionalProperty('gatewayId')}"
+        buildConfigField "String", "SHOP_ID", "${optionalProperty('shopId')}"
+        buildConfigField "String", "APP_METRICA_KEY", "${optionalProperty('metricaKey')}"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url "http://maven.google.com/" }
+    maven { url "https://jitpack.io" }
+    maven { url 'https://dl.bintray.com/yandex-money/maven' }
+}
+
+dependencies {
+    def nav_version = "1.0.0"
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+
+    implementation "android.arch.navigation:navigation-fragment-ktx:$nav_version" // use -ktx for Kotlin
+    implementation "android.arch.navigation:navigation-ui-ktx:$nav_version" // use -ktx for Kotlin
+
+    implementation "org.jetbrains.anko:anko:0.10.8"
+    implementation "org.jetbrains.anko:anko-recyclerview-v7:0.10.8"
+    implementation 'io.paperdb:paperdb:2.6'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.1'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.12.1'
+
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.2.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.google.android.gms:play-services-maps:16.1.0'
+
+    implementation 'com.google.firebase:firebase-core:16.0.8'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.9.9'
+
+    //implementation 'com.yandex.android:mapkit:3.2.0'
+    implementation 'com.ss.bannerslider:bannerslider:2.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    //noinspection GradleDependency
+    implementation 'com.google.android:flexbox:1.0.0'
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+
+    implementation 'net.cachapa.expandablelayout:expandablelayout:2.9.2'
+    implementation 'ru.egslava:MaskedEditText:1.0.5'
+
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.weiwangcn.betterspinner:library:1.1.0'
+
+    implementation 'com.yandex.money:checkout:2.1.0'
+}

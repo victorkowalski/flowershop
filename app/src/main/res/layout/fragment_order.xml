@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:mask="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:scrollbars="none"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+        <LinearLayout android:orientation="horizontal"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+            <CheckBox android:id="@+id/cb_write_postcard"
+                      android:paddingStart="0dp"
+                      android:checked="false"
+                      android:layout_gravity="center"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      tools:ignore="RtlHardcoded,RtlSymmetry"/>
+
+            <LinearLayout android:id="@+id/cb_write_postcard_label"
+                          android:orientation="vertical"
+                          android:layout_marginStart="10dp"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content">
+                <TextView android:text="@string/write_postcard_text"
+                          android:textSize="13sp"
+                          android:textColor="@color/mainTextColor"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"/>
+                <TextView android:text="@string/its_free"
+                          android:textSize="10sp"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          tools:ignore="SmallSp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <EditText android:id="@+id/et_postcard"
+                  android:minLines="2"
+                  android:visibility="gone"
+                  tools:visibility="visible"
+                  android:layout_marginTop="10dp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"/>
+
+        <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView android:text="Получатель"
+                      android:layout_weight="1"
+                      android:textColor="#000"
+                      android:textSize="16sp"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"/>
+
+            <CheckBox android:id="@+id/i_will_take_order_myself"
+                      android:text="Получу самостоятельно"
+                      android:textSize="12sp"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+
+        <TextView android:text="Имя"
+                  android:layout_marginTop="16dp"
+                  android:textSize="11sp"
+                  tools:ignore="SmallSp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="8dp"/>
+
+        <EditText
+                android:id="@+id/recipient_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        <TextView android:text="Телефон"
+                  android:layout_marginTop="20dp"
+                  android:textSize="11sp"
+                  tools:ignore="SmallSp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="8dp"/>
+
+        <!--EditText
+                android:id="@+id/recipient_phone"
+                android:inputType="phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/-->
+        <br.com.sapereaude.maskedEditText.MaskedEditText
+                style="@style/EBashEditText"
+                android:id="@+id/recipient_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:inputType="phone"
+                mask:allowed_chars="1234567890"
+                mask:mask="+7 (###) ###-##-##"
+                app:keep_hint="true"
+                android:lines="1"/>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="horizontal">
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_weight="2"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical">
+                <TextView android:text="Адрес"
+                          android:textSize="11sp"
+                          tools:ignore="SmallSp"
+                          android:layout_marginTop="20dp"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginBottom="8dp"/>
+
+                <EditText
+                        android:id="@+id/recipient_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="8dp"
+                          android:layout_weight="3"
+                          android:orientation="vertical">
+                <TextView android:text="Офис/ кварт."
+                          android:layout_marginTop="20dp"
+                          android:textSize="11sp"
+                          tools:ignore="SmallSp"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginBottom="8dp"/>
+
+                <EditText
+                        android:id="@+id/recipient_address_office"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <CheckBox android:id="@+id/recipient_additional_info_cb"
+                  android:text="Дополнительная информация"
+                  android:layout_marginTop="18dp"
+                  android:textSize="13sp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"/>
+
+        <EditText android:id="@+id/recipient_additional_info_et"
+                  android:minLines="2"
+                  android:visibility="gone"
+                  tools:visibility="visible"
+                  android:layout_marginTop="10dp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"/>
+
+        <View android:layout_width="match_parent"
+              android:background="#EAEAEA"
+              android:layout_marginTop="30dp"
+              android:layout_height="1dp"/>
+
+        <TextView android:text="Когда доставить"
+                  android:textColor="#000"
+                  android:textSize="16sp"
+                  android:layout_marginTop="30dp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="8dp"/>
+
+        <TextView android:text="Выберите дату"
+                  android:layout_marginTop="16dp"
+                  android:textSize="11sp"
+                  tools:ignore="SmallSp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="8dp"/>
+
+        <EditText
+                android:id="@+id/day_of_delivery"
+                android:inputType="none"
+                android:focusable="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout android:id="@+id/time_of_delivery_wrapper"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+            <TextView android:text="Время доставки"
+                      android:layout_marginTop="20dp"
+                      android:textSize="11sp"
+                      tools:ignore="SmallSp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginBottom="8dp"/>
+
+
+            <com.weiwangcn.betterspinner.library.BetterSpinner
+                    android:id="@+id/time_of_delivery"
+                    android:background="@drawable/edit_text_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:minHeight="35dp"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            <com.weiwangcn.betterspinner.library.BetterSpinner
+                    android:id="@+id/exact_time_of_delivery"
+                    android:background="@drawable/edit_text_background"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:minHeight="35dp"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_width="125dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+        </LinearLayout>
+
+        <CheckBox android:id="@+id/exact_delivery_time_cb"
+                  android:layout_marginTop="16dp"
+                  android:text="Точное время (±30мин) +500 ₽"
+                  android:textSize="13sp"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"/>
+
+        <View android:layout_width="match_parent"
+              android:background="#EAEAEA"
+              android:layout_marginTop="30dp"
+              android:layout_height="1dp"/>
+
+        <LinearLayout android:id="@+id/from_whom_wrapper_all"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical">
+
+            <LinearLayout
+                    android:gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <TextView android:text="От кого"
+                          android:layout_weight="1"
+                          android:textColor="#000"
+                          android:textSize="16sp"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content"/>
+
+                <CheckBox android:id="@+id/anonymous_order"
+                          android:text="Анонимно"
+                          android:textSize="12sp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/from_whom_wrapper"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical">
+
+                <TextView android:text="Имя"
+                          android:layout_marginTop="16dp"
+                          android:textSize="11sp"
+                          tools:ignore="SmallSp"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginBottom="8dp"/>
+
+                <EditText
+                        android:id="@+id/from_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+
+                <TextView android:text="Телефон"
+                          android:layout_marginTop="20dp"
+                          android:textSize="11sp"
+                          tools:ignore="SmallSp"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginBottom="8dp"/>
+
+                <!--EditText
+                        android:id="@+id/from_phone"
+                        android:inputType="phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/-->
+                <br.com.sapereaude.maskedEditText.MaskedEditText
+                        style="@style/EBashEditText"
+                        android:id="@+id/from_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:inputType="phone"
+                        mask:allowed_chars="1234567890"
+                        mask:mask="+7 (###) ###-##-##"
+                        app:keep_hint="true"
+                        android:lines="1"/>
+
+                <TextView android:text="E-mail"
+                          android:layout_marginTop="20dp"
+                          android:textSize="11sp"
+                          tools:ignore="SmallSp"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginBottom="8dp"/>
+
+                <EditText
+                        android:id="@+id/from_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <TextView android:text="Отправим чек и фото с букетом"
+                          android:layout_marginTop="20dp"
+                          android:textSize="11sp"
+                          tools:ignore="SmallSp"
+                          android:textColor="#000"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginBottom="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView android:text="Ваши бонусы"
+                      android:layout_weight="1"
+                      android:textColor="#000"
+                      android:textSize="16sp"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"/>
+
+            <TextView android:id="@+id/bonuses_count_label"
+                      android:textSize="16sp"
+                      android:textColor="#000"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView android:text="Доступно для оплаты"
+                  android:layout_marginTop="16dp"
+                  android:textSize="11sp"
+                  tools:ignore="SmallSp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="8dp"/>
+
+        <EditText android:id="@+id/bonuses_available"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:editable="false"/>
+
+        <LinearLayout android:orientation="horizontal"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content" android:paddingBottom="5dp">
+            <LinearLayout android:orientation="vertical"
+                          android:layout_weight="1"
+                          android:layout_width="0dp"
+                          android:layout_height="wrap_content">
+                <TextView android:text="Сколько списать?"
+                          android:layout_marginTop="16dp"
+                          android:textSize="11sp"
+                          tools:ignore="SmallSp"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginBottom="8dp"/>
+
+                <EditText android:id="@+id/write_off_bonuses"
+                          android:digits="0123456789"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:maxLength="9"/>
+            </LinearLayout>
+
+            <Button android:id="@+id/btn_write_off_bonuses"
+                    android:text="Списать"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="bottom"
+                    android:textColor="@color/colorAccent"
+                    android:background="@drawable/button_background_invert"
+                    android:layout_width="90dp"
+                    android:layout_height="35dp"/>
+
+        </LinearLayout>
+
+        <View android:layout_width="match_parent"
+              android:background="#EAEAEA"
+              android:layout_marginTop="30dp"
+              android:layout_height="1dp"/>
+
+
+        <TextView android:text="Способ оплаты"
+                  android:textColor="#000"
+                  android:textSize="16sp"
+                  android:layout_marginTop="30dp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/rb_payment_type_group"
+                android:layout_gravity="center_horizontal"
+                android:checkedButton="@+id/rb_bank_card"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:padding="1dp">
+
+            <RadioButton
+                    android:text="Оплата с банковской карты"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:id="@+id/rb_bank_card"
+                    android:layout_weight="1"/>
+            <!--RadioButton
+                    android:text="Оплата с Яндекс.Кошелька"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:id="@+id/rb_yamoney"
+                    android:layout_weight="1"/-->
+            <RadioButton
+                    android:text="Оплата наличными"
+                    android:paddingTop="9dp"
+                    android:paddingBottom="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textStart"
+                    android:id="@+id/cash_payment"
+                    android:layout_weight="1"/>
+
+        </RadioGroup>
+
+        <View android:layout_width="match_parent"
+              android:background="#EAEAEA"
+              android:layout_marginTop="30dp"
+              android:layout_height="1dp"/>
+
+        <TextView android:text="К оплате"
+                  android:textColor="#000"
+                  android:textSize="16sp"
+                  android:layout_marginTop="30dp"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:paddingTop="9dp"
+                android:paddingBottom="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView android:text="Сумма заказа"
+                      android:layout_weight="1"
+                      android:textColor="#000"
+                      android:textSize="16sp"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"/>
+
+            <TextView android:id="@+id/order_amount"
+                      android:textSize="16sp"
+                      android:textColor="#000"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/bonuses_wrapper"
+                android:gravity="center"
+                android:paddingTop="9dp"
+                android:paddingBottom="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+            <TextView android:text="Оплата бонусами"
+                      android:layout_weight="1"
+                      android:textColor="#000"
+                      android:textSize="16sp"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"/>
+
+            <TextView android:id="@+id/bonus_amount"
+                      android:textSize="16sp"
+                      android:textColor="#73C6B6"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/delivery_wrapper"
+                android:gravity="center"
+                android:paddingTop="9dp"
+                android:paddingBottom="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+            <TextView android:text="Доставка"
+                      android:layout_weight="1"
+                      android:textColor="#000"
+                      android:textSize="16sp"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"/>
+
+            <TextView android:id="@+id/delivery_amount"
+                      android:textSize="16sp"
+                      android:textColor="#000"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView tools:text="1666 ₽"
+                  android:id="@+id/order_total"
+                  android:layout_marginTop="30dp"
+                  android:textAlignment="center"
+                  android:textSize="16sp"
+                  android:textStyle="bold"
+                  android:textColor="@android:color/black"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"/>
+
+        <Button android:id="@+id/buy"
+                android:text="Оплатить"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorAccent"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"/>
+
+        <!--View android:layout_width="match_parent"
+              android:background="@drawable/dotted_line"
+              android:layout_marginTop="30dp"
+              android:layout_height="1dp"/-->
+
+    </LinearLayout>
+</ScrollView>

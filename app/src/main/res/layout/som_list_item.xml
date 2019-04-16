@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout android:id="@+id/expand_button"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:paddingTop="30dp"
+                  android:paddingBottom="30dp"
+                  android:paddingLeft="35dp"
+                  android:paddingRight="35dp"
+                  android:orientation="vertical">
+
+        <TextView android:id="@+id/name"
+                  tools:text="Test"
+                  android:textSize="16sp"
+                  android:textColor="@android:color/black"
+                  android:textFontWeight="500"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" tools:targetApi="p"/>
+
+        <TextView android:id="@+id/address"
+                  tools:text="Test"
+                  android:textSize="12sp"
+                  android:textColor="#787878"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+            android:id="@+id/expandable_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:el_duration="300"
+            app:el_expanded="false">
+
+        <LinearLayout android:id="@+id/info_block"
+                      android:orientation="vertical"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"/>
+
+    </net.cachapa.expandablelayout.ExpandableLayout>
+
+</LinearLayout>

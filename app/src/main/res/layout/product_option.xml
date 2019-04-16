@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_marginLeft="3dp"
+             android:layout_marginRight="3dp"
+             android:layout_marginTop="5dp"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content">
+
+    <RadioButton
+            android:id="@+id/title"
+            tools:text="Test"
+            android:button="@null"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/option_border_selector"
+            android:textColor="@drawable/option_text_color_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+</FrameLayout>
